@@ -1,44 +1,31 @@
+import { createTodo } from "./createTodo";
+import { displayTodoSomeday } from "./Someday";
 import "./styles.css"
-import { AboutPage } from "./about.js";
-import { LoadHomePage } from "./page_load.js";
-import { ContactPage } from "./contact.js";
-import { MenuPage } from "./menu.js";
-
+import { displayTodoToday } from "./Today";
+import { todoForms } from "./todoForm";
+import { displayTodoUpcoming } from "./Upcoming";
 console.log("Helllo");
 
-function clearContent(){
-    const content = document.querySelector('#content');
-    content.innerHTML=''
-}
 
-function intializeWebsite(){
 
-    const content = document.getElementById('content');
 
-    let Home = document.querySelector('#Home');
-    Home.addEventListener('click',()=>{
-        clearContent();
-        content.appendChild(LoadHomePage());
-    });
-
-    let Menu = document.querySelector('#Menu');
-    Menu.addEventListener('click',()=>{
-        clearContent();
-        content.appendChild(MenuPage());
-    });
-
-    let About = document.querySelector('#About');
-    About.addEventListener('click',()=>{
-        clearContent();
-        content.appendChild(AboutPage());
-    });
-
-    let Contact = document.querySelector('#Contact');
-    Contact.addEventListener('click',()=>{
-        clearContent();
-        content.appendChild(ContactPage());
-    });
+export function clickmenu(){
 
 }
+document.addEventListener('DOMContentLoaded',todoForms());
 
-document.addEventListener('DOMContentLoaded',intializeWebsite);
+const today = document.querySelector('.today');
+today.addEventListener('click',()=>{
+    displayTodoToday();
+})
+
+const upcoming = document.querySelector('.Upcoming');
+upcoming.addEventListener('click',()=>{
+    displayTodoUpcoming();
+})
+
+const someday = document.querySelector('.Someday');
+someday.addEventListener('click',()=>{
+    displayTodoSomeday();
+})
+
