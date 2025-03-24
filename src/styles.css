@@ -2,7 +2,7 @@ body{
     display: flex;
 }
 .menu{
-    display:flex;
+    display:none;
     flex-direction: column;
     align-items:normal;
     justify-content:space-evenly;
@@ -10,4 +10,9 @@ body{
     border: 5px solid black;
     height: 900px;
     width: 300px;
+}
+
+.menubar{
+    height: 40px;
+    width: 40px;
 }

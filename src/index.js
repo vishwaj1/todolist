@@ -18,6 +18,7 @@ const today = document.querySelector('.today');
 today.addEventListener('click',()=>{
     displayTodoToday();
 })
+today.click();
 
 const upcoming = document.querySelector('.Upcoming');
 upcoming.addEventListener('click',()=>{
@@ -28,4 +29,5 @@ const someday = document.querySelector('.Someday');
 someday.addEventListener('click',()=>{
     displayTodoSomeday();
 })
+
 

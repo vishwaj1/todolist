@@ -21,7 +21,7 @@ export function displayTodoUpcoming(){
     let cont = document.querySelector('#container');
     cont.innerHTML='';
     if(listoftodos.length == 0 ){
-        cont.innerHTML = 'No Todos to Display';
+        cont.innerHTML = 'Upcoming: No Todos to Display';
     }
     else
     {

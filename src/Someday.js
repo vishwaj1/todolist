@@ -21,7 +21,7 @@ export function displayTodoSomeday(){
     let cont = document.querySelector('#container');
     cont.innerHTML='';
     if(listoftodos.length == 0 ){
-        cont.innerHTML = 'No Todos to Display';
+        cont.innerHTML = 'Someday: No Todos to Display';
     }
     else
     {

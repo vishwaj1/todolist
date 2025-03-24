@@ -6,7 +6,7 @@ export function todoForms(){
     modal.innerHTML = `
     <div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
                             background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.5)">
-        <h2>Enter Details</h2>
+        <h2>Todo Entry</h2>
         <form id="popupForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
@@ -34,6 +34,11 @@ export function todoForms(){
         popup.style.display = 'block';
     });
 
+    const close = document.getElementById('closeForm');
+    close.addEventListener('click',()=>{
+        popup.style.display = 'none';
+    })
+
     const form = document.getElementById('popupForm');
     form.addEventListener('submit',(e)=>{
         popup.style.display = 'none';
@@ -44,6 +49,7 @@ export function todoForms(){
         let due = document.getElementById('DueDate').value;
         let note = document.getElementById('notes').value;
 
+        form.reset();
         createTodo(name,desc,due,note);
 
 
