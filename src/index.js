@@ -29,5 +29,18 @@ const someday = document.querySelector('.Someday');
 someday.addEventListener('click',()=>{
     displayTodoSomeday();
 })
+let toggle = true;
+const menu = document.querySelector('.menu')
+const menubar = document.querySelector('.menubar');
 
+
+menubar.addEventListener('click',()=>{
+    if(toggle){
+        menu.style.display = 'flex';
+    }
+    else{
+        menu.style.display = 'none';
+    }
+    toggle = !toggle;
+})
 
